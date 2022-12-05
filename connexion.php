@@ -12,19 +12,32 @@ if (!isset($_POST["login"])) {
 $login = $_POST["login"];
 $pwd = $_POST["pwd"];
 
-// requete pour récupérer le contenu de la DB
+// requete pour récupérer le contenu de la DB pour l'utilisateur concerné
 $catchUsers = $conn->query("SELECT * FROM utilisateurs WHERE login='$login';");
-// et verifier si le login existe déjà en comptant les éventuels doublons
+// verifier si le login existe déjà en comptant les éventuels doublons
 $users = mysqli_num_rows($catchUsers);
+// fetch le contenu de la requête
+$userInfo = $catchUsers->fetch_all();
 
-// si le login existe, qu'il y a une valeur à login et pwd 
-if (($users === 1) && ($login != NULL) && ($pwd != NULL)) {
-    // définir les valeurs de session
-    $_SESSION["login"] = $login;
-    $_SESSION["pwd"] = $pwd;
-    // puis valider la connexion en redirigeant vers profil.php
-    echo "Connexion réussie";
-    header("refresh:2; url=profil.php");
+
+// condition pour rentrer dans les erreurs que lorsque des données sont rentrées
+if (isset($_POST['submit'])) {
+    // une requete pour valider la connexion si le login existe déjà et que le mot de passe correspond à celui en DB
+    if (($users === 1) && ($_POST["pwd"] === $userInfo[0][2])) {
+        // si le login existe, qu'il y a une valeur à login et pwd 
+        if (($users === 1) && ($login != NULL) && ($pwd != NULL)) {
+            // définir les valeurs de session
+            $_SESSION["login"] = $login;
+            $_SESSION["pwd"] = $pwd;
+            // puis valider la connexion en redirigeant vers profil.php
+            echo "Connexion réussie";
+            header("refresh:2; url=profil.php");
+        }
+    } elseif ($users != 1) {
+        echo "Ce login n'existe pas";
+    } elseif ($_POST["pwd"] !== $userInfo[0][2]) {
+        echo "Mot de pas incorrect";
+    }
 }
 
 ?>
