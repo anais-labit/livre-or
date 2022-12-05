@@ -49,9 +49,9 @@ include './includes/connect.php';
 
     <div class="formContainer">
         <form action="inscription.php" method="post">
-            <input type="text" name="login" placeholder="Choissisez un login" require>
-            <input type="password" name="pwd" placeholder="Saississez un mot de passe" require>
-            <input type="password" name="pwd2" placeholder="Confirmez votre mot de passe" require>
+            <input type="text" name="login" placeholder="Choissisez un login" required>
+            <input type="password" name="pwd" placeholder="Saississez un mot de passe" required>
+            <input type="password" name="pwd2" placeholder="Confirmez votre mot de passe" required>
             <input type="submit" name="submit" value="Créer le compte">
         </form>
     </div>
