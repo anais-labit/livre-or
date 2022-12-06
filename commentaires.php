@@ -11,8 +11,8 @@ if (!isset($_POST["submit"])) {
     $_POST["login"] = "";
 };
 
-// création de la variable commentaire issue du POST 
-$commentaire = $_POST["commentaire"];
+// création de la variable commentaire issue du POST en le formatant de telle sorte à ce que l'on puisse mettre des ' et caractères spéciaux dans le post
+$commentaire = htmlspecialchars($_POST["commentaire"]);
 
 // requete pour récupérer le contenu de la DB de l'utilisateur connecté
 $login = $_SESSION["login"];
@@ -34,9 +34,9 @@ if (isset($_POST['submit'])) {
     $date = date('Y-m-d H:i:s');
     // requete pour l'ajout du commentaire avec les valeurs de l'utilisateur associé + date 
     $newComm = $conn->query("INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES ('$commentaire', '$intId', '$date')");
-    echo "Félicitations ! Votre commentaire a bien été publié";
+    echo "Votre commentaire a bien été publié. Merci " . $_SESSION['login'] . " !";
     // rediriger vers la page avec tous les commentaires déjà postés
-    // header("refresh:2; url=livre-or.php");
+    header("refresh:2; url=livre-or.php");
 }
 
 ?>
