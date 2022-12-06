@@ -1,3 +1,10 @@
+<?php
+// démarrer une session
+session_start();
+include './includes/header.php';
+include './includes/connect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,20 +17,13 @@
 
 <body>
     <?php
-    include './includes/header.php';
-
-
-    session_start();
     if (isset($_SESSION["login"])) {
         echo " <h1> Salut " . ucwords($_SESSION['login']) . " !</h1>";
     } else {
         echo "<h1> Salut ! </h1>";
     }
     ?>
-    <h1>Bienvenue sur mon super site </h1>
-
-
-
+    <h3>Bienvenue sur mon super site </h3>
 
 
     <?php

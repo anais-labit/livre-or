@@ -1,4 +1,6 @@
 <?php
+// démarrer une session
+session_start();
 include './includes/header.php';
 include './includes/connect.php';
 
@@ -53,6 +55,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+
     <div class="formContainer">
         <form action="connexion.php" method="post">
             <input type="text" name="login" placeholder="Login" required>
@@ -64,6 +67,7 @@ if (isset($_POST['submit'])) {
     <?php
     include './includes/footer.php';
     ?>
+
 </body>
 
 </html>

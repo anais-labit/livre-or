@@ -12,9 +12,11 @@
 <body>
 
     <footer>
-        <div class="decon">
-            <a href="./includes/logout.php"> <br> Déconnexion</a>
-        </div>
+        <?php if (isset($_SESSION['login'])) { ?>
+            <div class="decon">
+                <a href="./includes/logout.php"> <br> Déconnexion</a>
+            </div>
+        <?php } ?>
         <div>
             <p>&copy;<a href="https://anais-labit.students-laplateforme.io/index.html">ANAIS LABIT </a> <span class="year">• 2022</span></p>
         </div>
