@@ -12,17 +12,17 @@
 <body>
 
     <footer>
-        <?php if (isset($_SESSION['login'])) { ?>
-            <div class="decon">
-                <a href="./includes/logout.php"> <br> Déconnexion</a>
-            </div>
-        <?php } ?>
         <div>
             <p>&copy;<a href="https://anais-labit.students-laplateforme.io/index.html">ANAIS LABIT </a> <span class="year">• 2022</span></p>
         </div>
         <div class="git">
             <a href="https://github.com/anais-labit/livre-or">Github du projet <i class="fab fa-github-alt"></i></a>
         </div>
+        <?php if (isset($_SESSION['login'])) { ?>
+            <div class="decon">
+                <a href="./includes/logout.php"> <br> Déconnexion</a>
+            </div>
+        <?php } ?>
     </footer>
 
 </body>

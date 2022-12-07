@@ -18,6 +18,7 @@ $displayComm = $catchComm->fetch_all();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
     <title>Livre d'or</title>
 </head>
 
@@ -53,7 +54,12 @@ $displayComm = $catchComm->fetch_all();
     // donner la possibilité de laisser un commentaire si on est connécté
     if (isset($_SESSION['login'])) { ?>
         <button><a href="commentaires.php">Laisser un commentaire</a></button>
-    <?php } ?>
+    <?php }
+
+    include './includes/footer.php';
+    ?>
+
+
 
 </body>
 
