@@ -47,6 +47,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
     <title>Modifier mon profil</title>
 </head>
 
@@ -59,9 +60,9 @@ if (isset($_POST['submit'])) {
         echo "<h1> Salut ! </h1>";
     }
     ?>
-    <h3>Modifier votre profil</h3>
 
     <div class="formContainer">
+        <h3>Modifier votre profil</h3>
         <form action="profil.php" method="post">
             <input type="text" name="login" placeholder="Login : <?= $login ?> ou nouveau ?" required>
             <input type="password" name="confpwd" placeholder="Ancien mot de passe" required>
@@ -69,6 +70,13 @@ if (isset($_POST['submit'])) {
             <input type="password" name="newpwd2" placeholder="Confirmation" required>
             <input type="submit" name="submit" value="Sauvegarder les changements">
         </form>
+    </div>
+
+    <div class="erase">
+        <a href="./includes/suppression.php"> <br>Suppression de votre compte</a>
+    </div>
+    </form>
+
     </div>
 
     <?php
