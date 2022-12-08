@@ -24,39 +24,37 @@ $displayComm = $catchComm->fetch_all();
 </head>
 
 <body>
-
-    <div class="livreContainer">
-        <table>
-            <thead>
-                <th>Livre d'or</th>
-            </thead>
-            <tbody>
-                <td>
-                    <?php
-                    $i = -1;
-                    // boucle 1 qui parcourt les différents tableaux de commentaire
-                    foreach ($displayComm as $ligne) {
-                        // boucle 2 qui parcourt les cases du tableau
-                        foreach ($ligne as $value) {
-                            $i++;
-                            // echo les valeurs du tableau en fonction de leur index (0 = date, 1=login, 2=commentaire)
-                            echo 'Posté le ' . $displayComm[$i][0] . ' par ' . $displayComm[$i][1] . "<br>" . $displayComm[$i][2] . '</p><br><br>';
-                            // arrêter lorsqu'il n'y a plus de valeur à parcourir
-                            break;
+    <div class="page">
+        <h1>Livre d'or</h1>
+        <div class="livreContainer">
+            <table>
+                <tbody>
+                    <td>
+                        <?php
+                        $i = -1;
+                        // boucle 1 qui parcourt les différents tableaux de commentaire
+                        foreach ($displayComm as $ligne) {
+                            // boucle 2 qui parcourt les cases du tableau
+                            foreach ($ligne as $value) {
+                                $i++;
+                                // echo les valeurs du tableau en fonction de leur index (0 = date, 1=login, 2=commentaire)
+                                echo 'Posté le ' . $displayComm[$i][0] . ' par ' . $displayComm[$i][1] . "<br>" . $displayComm[$i][2] . '</p><br><br>';
+                                // arrêter lorsqu'il n'y a plus de valeur à parcourir
+                                break;
+                            }
                         }
-                    }
-                    ?>
-                </td>
-            </tbody>
-        </table>
+                        ?>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+        <?php
+        // donner la possibilité de laisser un commentaire si on est connécté
+        if (isset($_SESSION['login'])) { ?>
+            <button><a href="commentaires.php">Laisser un commentaire</a></button>
+        <?php }    ?>
     </div>
-
     <?php
-    // donner la possibilité de laisser un commentaire si on est connécté
-    if (isset($_SESSION['login'])) { ?>
-        <button><a href="commentaires.php">Laisser un commentaire</a></button>
-    <?php }
-
     include './includes/footer.php';
     ?>
 

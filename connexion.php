@@ -57,13 +57,16 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+    <div class="page">
+        <h1>Se connecter</h1>
 
-    <div class="formContainer">
-        <form action="connexion.php" method="post">
-            <input type="text" name="login" placeholder="Login" required>
-            <input type="password" name="pwd" placeholder="Mot de passe" required>
-            <input type="submit" name="submit" value="Connexion">
-        </form>
+        <div class="formContainer">
+            <form action="connexion.php" method="post">
+                <input type="text" name="login" placeholder="Login" required>
+                <input type="password" name="pwd" placeholder="Mot de passe" required>
+                <input type="submit" id="log" name="submit" value="Connexion">
+            </form>
+        </div>
     </div>
 
     <?php

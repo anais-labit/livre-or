@@ -29,22 +29,22 @@ include './includes/connect.php';
         <div class="textContainer">
             <h3>Livre d'or : présentation et objectifs du projet</h3>
             <p>Coder un module de connexion permettant aux utilisateurs de créer leur compte, se connecter et modifier leurs informations. Ils pourront également laisser un commentaire et consulter ceux déjà en ligne.</p>
-            <ul>Il fallait créer : <br>
-                <li>Une base de données et des tables - à l’aide de phpmyadmin</li>
-                <li>Une page d’accueil - présentation du site</li>
-                <li>Un formulaire d’inscription - les données sont insérées dans la base de
+            <ul>Il fallait créer : <br><br>
+                <li><i class="fa-solid fa-check"></i> Une base de données et des tables - à l’aide de phpmyadmin</li>
+                <li><i class="fa-solid fa-check"></i> Une page d’accueil - présentation du site</li>
+                <li><i class="fa-solid fa-check"></i> Un formulaire d’inscription - les données sont insérées dans la base de
                     données et l’utilisateur est redirigé vers la page de connexion</li>
-                <li>Un formulaire de connexion - s’il existe un utilisateur en bdd correspondant à ces informations, alors
+                <li><i class="fa-solid fa-check"></i> Un formulaire de connexion - s’il existe un utilisateur en bdd correspondant à ces informations, alors
                     l’utilisateur devient connecté</li>
-                <li>Une page permettant de modifier son profil - possibilité de modifier login et mot de passe de l'utilisateur connecté</li>
-                <li>Une page permettant de voir le livre d’or - l’ensemble des commentaires, du plus récent au plus ancien, dans le format : "posté le `jour/mois/année` par `utilisateur`"</li>
-                <li>Un formulaire d’ajout de commentaire - accessible uniquement aux utilisateurs connectés.</li>
-                <li>Une structure html correcte et un design soigné à l’aide de css</li>
+                <li><i class="fa-solid fa-check"></i> Une page permettant de modifier son profil - possibilité de modifier login et mot de passe de l'utilisateur connecté</li>
+                <li><i class="fa-solid fa-check"></i> Une page permettant de voir le livre d’or - l’ensemble des commentaires, du plus récent au plus ancien, dans le format</li>
+                <li><i class="fa-solid fa-check"></i> Un formulaire d’ajout de commentaire - accessible uniquement aux utilisateurs connectés</li>
+                <li><i class="fa-solid fa-check"></i> Une structure html correcte et un design soigné à l’aide de css</li>
             </ul>
             <!-- <br> </br> -->
-            <ul>Bonus
-                <li>Affichage conditionnel de la barre de navigation</li>
-                <li>Suppression de compte</li>
+            <ul>Bonus <br><br>
+                <li><i class="fa-solid fa-check"></i> Affichage conditionnel de la barre de navigation</li>
+                <li><i class="fa-solid fa-check"></i> Suppression de compte</li>
             </ul>
         </div>
     </div>
