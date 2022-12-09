@@ -54,14 +54,15 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <h3>Ajouter un commentaire</h3>
-    <div class="formContainer">
-        <form action="commentaires.php" method="post">
-            <textarea name="commentaire" placeholder="Écrire ici..." style="height: 100px" required></textarea>
-            <input type="submit" name="submit" value="Publier votre commentaire">
-        </form>
+    <div class="page">
+        <h1>Ajouter un commentaire</h1>
+        <div class="formContainer">
+            <form action="commentaires.php" method="post">
+                <textarea name="commentaire" placeholder="Écrire ici..." style="height: 100px" required></textarea>
+                <input type="submit" name="submit" id="log" value="Publier votre commentaire">
+            </form>
+        </div>
     </div>
-
 
     <?php
     include './includes/footer.php';

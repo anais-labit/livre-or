@@ -48,11 +48,13 @@ $displayComm = $catchComm->fetch_all();
                 </tbody>
             </table>
         </div>
-        <?php
-        // donner la possibilité de laisser un commentaire si on est connécté
-        if (isset($_SESSION['login'])) { ?>
-            <button><a href="commentaires.php">Laisser un commentaire</a></button>
-        <?php }    ?>
+        <div class="commentaireContainer">
+            <?php
+            // donner la possibilité de laisser un commentaire si on est connécté
+            if (isset($_SESSION['login'])) { ?>
+                <button><a href="commentaires.php">Laisser un commentaire</a></button>
+            <?php }    ?>
+        </div>
     </div>
     <?php
     include './includes/footer.php';

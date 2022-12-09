@@ -212,10 +212,6 @@ button:hover a {
 
 /* PAGE LIVRE D'OR */
 
-button a {
-  color: black;
-}
-
 .livreContainer {
   display: flex;
   justify-content: center;
@@ -224,7 +220,7 @@ button a {
 
 .livreContainer table {
   text-align: left;
-  padding-top: 10px;
+  padding-top: 40px;
   padding-left: 30px;
   /* padding-bottom: 10px; */
   background-color: #007a78;
@@ -236,4 +232,42 @@ button a {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 10px;
+}
+
+.commentaireContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 75vw;
+  padding-bottom: 40px;
+}
+
+.commentaireContainer button {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.commentaireContainer button a {
+  padding: 40px;
+  display: flex;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #f8df84;
+  border-radius: 10px;
+  background-color: white;
+  opacity: 0.7;
+  font-size: 14px;
+  color: #007a78;
+}
+
+/* PAGE COMMENTAIRES */
+
+.formContainer textarea {
+  resize: none;
+  width: 30vw;
+  padding: 30px;
+  outline: none;
+  border: 1px solid #007a78;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 10px;
 }
